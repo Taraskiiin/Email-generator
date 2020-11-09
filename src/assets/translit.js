@@ -54,7 +54,7 @@ const cyrillicToLatin = (text) => {
     .replace(/\u041C/g, "M")
     .replace(/\u0418/g, "I")
     .replace(/\u0422/g, "T")
-    .replace(/\u042C/g, "'")
+    .replace(/\u042C/g, "")
     .replace(/\u0411/g, "B")
     .replace(/\u042E/g, "YU")
     .replace(/\u044F/g, "ya")
@@ -63,13 +63,27 @@ const cyrillicToLatin = (text) => {
     .replace(/\u043C/g, "m")
     .replace(/\u0438/g, "i")
     .replace(/\u0442/g, "t")
-    .replace(/\u044C/g, "'")
+    .replace(/\u044C/g, "")
     .replace(/\u0431/g, "b")
     .replace(/\u044E/g, "yu")
     .replace(/\u0456/g, "і")
     .replace(/\u0454/g, "ye")
+    .replace(/\u0024/g, "")
+    .replace(/\u0021/g, "")
+    .replace(/\u0023/g, "")
+    .replace(/\u0020/g, "")
+    .replace(/\u0025/g, "")
+    .replace(/\u0026/g, "")
+    .replace(/\u0027/g, "")
+    .replace(/\u0028/g, "")
+    .replace(/\u0029/g, "")
+    .replace(/\u002A/g, "")
+    .replace(/\u002B/g, "")
+    .replace(/\u002C/g, "")
+    .replace(/\u002D/g, "")
+    .replace(/\u002F/g, "")
+    .replace(/\u003A/g, "")
     .replace(/\u0457/g, "yi");
-
   return text;
 };
 export default cyrillicToLatin;

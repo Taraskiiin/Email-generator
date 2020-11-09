@@ -21,7 +21,7 @@ const generatorEmail = (firstname, lastname, company) => {
     return false;
   } else {
     domain.forEach((i) => {
-      res.push((firstname + "@" + i).toLowerCase());
+      res.push(((firstname + "@" + i).toLowerCase()));
       res.push((firstname + lastname + "@" + i).toLowerCase());
       res.push((firstname + "." + lastname + "@" + i).toLowerCase());
       res.push((firstnameFL + lastname + "@" + i).toLowerCase());
@@ -32,7 +32,7 @@ const generatorEmail = (firstname, lastname, company) => {
       res.push((firstname + "_" + lastname + "@" + i).toLowerCase());
       res.push((firstnameFL + "_" + lastname + "@" + i).toLowerCase());
       res.push((lastname + firstname + "@" + i).toLowerCase());
-      res.push((lastname + "." + firstname + "@" + i).toLowerCase());
+      res.push(((lastname + "." + firstname + "@" + i).toLowerCase()));
       res.push((lastname + firstnameFL + "@" + i).toLowerCase());
       res.push((lastname + "." + firstnameFL + "@" + i).toLowerCase());
     });
