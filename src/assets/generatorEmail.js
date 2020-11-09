@@ -1,7 +1,6 @@
 const generatorEmail = (firstname, lastname, company) => {
-  firstname.toString().toLowerCase().trim();
-  lastname.toLowerCase().trim();
-  company.toString().toLowerCase().trim();
+  const firstnameFL = firstname.charAt(0);
+  const lastnameFL = lastname.charAt(0);
   const domain = [
     company + ".com",
     company + ".ua",
@@ -22,22 +21,22 @@ const generatorEmail = (firstname, lastname, company) => {
     return false;
   } else {
     domain.forEach((i) => {
-      res.push(firstname + "@" + domain[i]);
-      res.push(firstname + lastname + "@" + domain[i]);
-      res.push(firstname + "." + lastname + "@" + domain[i]);
-      res.push(firstname.charAt(0) + lastname + "@" + domain[i]);
-      res.push(firstname.charAt(0) + "." + lastname + "@" + domain[i]);
-      res.push(firstname + lastname.charAt(0) + "@" + domain[i]);
-      res.push(firstname + "." + lastname.charAt(0) + "@" + domain[i]);
-      res.push(firstname.charAt(0) + lastname.charAt(0) + "@" + domain[i]);
-      res.push(firstname + "_" + lastname + "@" + domain[i]);
-      res.push(firstname.charAt(0) + "_" + lastname + "@" + domain[i]);
-      res.push(lastname + firstname + "@" + domain[i]);
-      res.push(lastname + "." + firstname + "@" + domain[i]);
-      res.push(lastname + firstname.charAt(0) + "@" + domain[i]);
-      res.push(lastname + "." + firstname.charAt(0) + "@" + domain[i]);
+      res.push((firstname + "@" + i).toLowerCase());
+      res.push((firstname + lastname + "@" + i).toLowerCase());
+      res.push((firstname + "." + lastname + "@" + i).toLowerCase());
+      res.push((firstnameFL + lastname + "@" + i).toLowerCase());
+      res.push((firstnameFL + "." + lastname + "@" + i).toLowerCase());
+      res.push((firstname + lastnameFL + "@" + i).toLowerCase());
+      res.push((firstname + "." + lastnameFL + "@" + i).toLowerCase());
+      res.push((firstnameFL + lastnameFL + "@" + i).toLowerCase());
+      res.push((firstname + "_" + lastname + "@" + i).toLowerCase());
+      res.push((firstnameFL + "_" + lastname + "@" + i).toLowerCase());
+      res.push((lastname + firstname + "@" + i).toLowerCase());
+      res.push((lastname + "." + firstname + "@" + i).toLowerCase());
+      res.push((lastname + firstnameFL + "@" + i).toLowerCase());
+      res.push((lastname + "." + firstnameFL + "@" + i).toLowerCase());
     });
+    }
     console.log(res);
-  }
 };
 export default generatorEmail;
