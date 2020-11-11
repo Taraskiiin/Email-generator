@@ -8,9 +8,12 @@
     "@testing-library/react": "^11.1.1",
     "@testing-library/user-event": "^12.2.0",
     "axios": "^0.21.0",
+    "cors": "^2.8.5",
     "cyrillic-to-translit-js": "^3.1.0",
+    "email-exists": "^0.2.1",
     "express": "^4.17.1",
     "filter-validate-email": "^1.0.4",
+    "formik": "^2.2.4",
     "nodemon": "^2.0.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -22,7 +25,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "nodemon app.js",
+    "server": "nodemon server.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
@@ -32,7 +35,6 @@
       "react-app/jest"
     ]
   },
-  "proxy": "http://localhost:666",
   "browserslist": {
     "production": [
       ">0.2%",

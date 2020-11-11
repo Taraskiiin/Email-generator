@@ -1,61 +1,37 @@
-// const express = require("express");
-// const app = express();
-// const bodyParser = require("body-parser");
-// const convert = require("cyrillic-to-latin");
-// const dns = require("dns");
-// const server = require("http").Server(app);
-// app.use(express.json());
+const express = require("express");
+const cors = require('cors');
+const app = express();
+const server = require("http").Server(app);
+const emailExists = require("email-exists");
 
-// app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(bodyParser.json());
-
-// app.get("/", (req, res) => {
-//     const result = req.params.filter(el => {
-//     const domain = req.split("@")[1];
-//     dns.resolve(domain, "MX", function (err, addresses) {
-//     if (err) {
-//       return false;
-//     } else if (addresses && addresses.length > 0) {
-//       return el
-//     }});
-//   });
-//   res.send(result);
-// });
-
-// app.post("/", (req, res) => {
-//   console.log(req.body);
-// });
-// server.listen(666, (err) => {
-//   if (err) {
-//     throw Error(err);
-//   }
-//   console.log("Server was started!");
-// });
-
-// const rooms = new Map();
-
-// app.get("/", (req, res) => {
-//   const { id: roomId } = req.params;
-//   const obj = rooms.has(roomId)
-//     ? {
-//         users: [...rooms.get(roomId).get("users").values()],
-//         messages: [...rooms.get(roomId).get("messages").values()],
-//       }
-//     : { users: [], messages: [] };
-//   res.json(obj);
-// });
-
-// app.post("/rooms", (req, res) => {
-//   const { roomId, userName } = req.body;
-//   if (!rooms.has(roomId)) {
-//     rooms.set(
-//       roomId,
-//       new Map([
-//         ["users", new Map()],
-//         ["messages", []],
-//       ])
-//     );
-//   }
-//   res.send();
-// });
-
+app.use(express.json());
+app.use(cors());
+app.get("/", (req, res) => {
+  res.send();
+});
+app.post("/", (req, res) => {
+  const { emails = [] } = req.body;
+  const uniqEmails = new Set(emails);
+  const validEmails = [];
+  const requests = [...uniqEmails].map(
+    (el) =>
+      new Promise((resolve, reject) => {
+        emailExists({
+          sender: "taraskravets95@gmail.com",
+          recipient: el,
+        }).then((data) => { 
+          if (data === "NOT_FOUND") {
+            validEmails.push(el);
+          }
+          return resolve();
+        }).catch(resolve);
+      })
+  );
+  Promise.all(requests).then(() => res.json({ emails: validEmails }));
+});
+server.listen(9000, (err) => {
+  if (err) {
+    throw Error(err);
+  }
+  console.log("Server was started!");
+});
