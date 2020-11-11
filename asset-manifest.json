@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/Email-generator/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/Email-generator/static/js/main.cdb0cff1.chunk.js",
-    "main.js.map": "/Email-generator/static/js/main.cdb0cff1.chunk.js.map",
+    "main.css": "/Email-generator/static/css/main.61db65c6.chunk.css",
+    "main.js": "/Email-generator/static/js/main.9dcfc7e4.chunk.js",
+    "main.js.map": "/Email-generator/static/js/main.9dcfc7e4.chunk.js.map",
     "runtime-main.js": "/Email-generator/static/js/runtime-main.6db83662.js",
     "runtime-main.js.map": "/Email-generator/static/js/runtime-main.6db83662.js.map",
-    "static/js/2.31cb6023.chunk.js": "/Email-generator/static/js/2.31cb6023.chunk.js",
-    "static/js/2.31cb6023.chunk.js.map": "/Email-generator/static/js/2.31cb6023.chunk.js.map",
+    "static/js/2.3666c8d0.chunk.js": "/Email-generator/static/js/2.3666c8d0.chunk.js",
+    "static/js/2.3666c8d0.chunk.js.map": "/Email-generator/static/js/2.3666c8d0.chunk.js.map",
     "index.html": "/Email-generator/index.html",
-    "static/css/main.8c8b27cf.chunk.css.map": "/Email-generator/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.31cb6023.chunk.js.LICENSE.txt": "/Email-generator/static/js/2.31cb6023.chunk.js.LICENSE.txt"
+    "static/css/main.61db65c6.chunk.css.map": "/Email-generator/static/css/main.61db65c6.chunk.css.map",
+    "static/js/2.3666c8d0.chunk.js.LICENSE.txt": "/Email-generator/static/js/2.3666c8d0.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/Email-generator/static/media/2822.2a22610c.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.6db83662.js",
-    "static/js/2.31cb6023.chunk.js",
-    "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.cdb0cff1.chunk.js"
+    "static/js/2.3666c8d0.chunk.js",
+    "static/css/main.61db65c6.chunk.css",
+    "static/js/main.9dcfc7e4.chunk.js"
   ]
 }
