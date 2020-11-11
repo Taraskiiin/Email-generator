@@ -1,6 +1,5 @@
 import React from "react";
 
-import formik from "formik";
 import "./App.css";
 import cyrillicToLatin from "./helpers/translit";
 import generatorEmail from "./helpers/generatorEmail";
