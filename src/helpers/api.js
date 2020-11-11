@@ -1,4 +1,4 @@
 import axios from "axios";
 export const validateEmails = (emailsArr) => {
-  return axios.post(`http://localhost:9000/`, { emails : emailsArr });
+  return axios.post(`https://git.heroku.com/gentle-eyrie-34093.git`, { emails : emailsArr });
 };
